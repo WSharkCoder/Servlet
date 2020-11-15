@@ -1,0 +1,50 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <!-- Servlet基本使用演示 -->
+    <display-name>Servlet NO.01</display-name>
+    <!-- 配置Servlet类的处理机制 -->
+    <servlet>
+        <servlet-name>HelloWordServlet</servlet-name>
+        <servlet-class>controller.HelloWordServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadAllParaServlet</servlet-name>
+        <servlet-class>controller.ReadAllParaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadParaFromCheckBoxServlet</servlet-name>
+        <servlet-class>controller.ReadParaFromCheckBoxServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadParaFromTextServlet</servlet-name>
+        <servlet-class>controller.ReadParaFromTextServlet</servlet-class>
+    </servlet>
+
+    <!-- 配置url与Servlet处理Http链接中的映射关系 -->
+    <servlet-mapping>
+        <servlet-name>HelloWordServlet</servlet-name>
+        <url-pattern>/hello_word</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>ReadParaFromTextServlet</servlet-name>
+        <url-pattern>/read_para_from_text</url-pattern>
+    </servlet-mapping>
+
+    <!--    复选框数据的提交-->
+    <servlet-mapping>
+        <servlet-name>ReadParaFromCheckBoxServlet</servlet-name>
+        <url-pattern>/read_para_from_checkbox</url-pattern>
+    </servlet-mapping>
+
+    <!--  多数据提交-->
+    <servlet-mapping>
+        <servlet-name>ReadAllParaServlet</servlet-name>
+        <url-pattern>/read_all_para</url-pattern>
+    </servlet-mapping>
+
+</web-app>

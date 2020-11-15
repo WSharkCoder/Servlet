@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servlet No.1</title>
+</head>
+<body>
+
+<form action="read_all_para" method="post" target="_blank">
+    <input type="checkbox" name="maths" checked="checked"/>数学
+    <input type="checkbox" name="physics"/>物理
+    <input type="checkbox" name="chemistry" checked="checked"/>化学
+    <input type="submit" value="选择学科"/>
+</form>
+<form action="read_para_from_checkbox" method="post" target="_blank">
+    <input type="checkbox" name="maths" checked="checked"/>数学
+    <input type="checkbox" name="physics"/> 物理
+    <input type="checkbox" name="chemistry" checked="checked"/>化学
+    <input type="submit" value="选择学科"/>
+</form>
+<form action="read_para_from_text" method="post">
+    <div>
+        <div>
+            <span>
+                名字：<input type="text" name="first_name">
+            </span>
+        </div>
+        <div>
+            <span>
+                姓氏：<input type="text" name="second_name">
+            </span>
+        </div>
+        <input type="submit" value="提交">
+    </div>
+</form>
+</body>
+</html>
