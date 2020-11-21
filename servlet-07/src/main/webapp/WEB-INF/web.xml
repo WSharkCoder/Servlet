@@ -1,0 +1,80 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+<!--    <filter>-->
+<!--        <filter-name>siteCounter</filter-name>-->
+<!--        <filter-class>SiteHitCounter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>siteCounter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+    <servlet>
+        <servlet-name>pageRedirect</servlet-name>
+        <servlet-class>PageRedirect</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Refresh</servlet-name>
+        <servlet-class>Refresh</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendMail</servlet-name>
+        <servlet-class>SendMail</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>pageHitCounter</servlet-name>
+        <servlet-class>PageHitCounter</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>contextLog</servlet-name>
+        <servlet-class>ContextLog</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetLocal</servlet-name>
+        <servlet-class>GetLocal</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Global</servlet-name>
+        <servlet-class>Global</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>DisplaySpanish</servlet-name>
+        <servlet-class>DisplaySpanish</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Global</servlet-name>
+        <url-pattern>/global</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DisplaySpanish</servlet-name>
+        <url-pattern>/displayspanish</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetLocal</servlet-name>
+        <url-pattern>/getlocal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>contextLog</servlet-name>
+        <url-pattern>/conterlog</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendMail</servlet-name>
+        <url-pattern>/sendmail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>pageHitCounter</servlet-name>
+        <url-pattern>/pagehitcounter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>pageRedirect</servlet-name>
+        <url-pattern>/pageredirect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Refresh</servlet-name>
+        <url-pattern>/refresh</url-pattern>
+    </servlet-mapping>
+</web-app>

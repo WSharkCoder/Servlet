@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
+    <display-name>Servlet-02</display-name>
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>AuthFilter</filter-class>
+    </filter>
+    <!-- 指定一个过滤器 -->
+    <filter>
+        <!-- 用于为过滤器指定一个名字 该元素不能为空 -->
+        <filter-name>GlobalFilter</filter-name>
+        <!-- 用于指定过滤器的完整的限定类名 -->
+        <filter-class>GlobalFilter</filter-class>
+        <!-- 用于为过滤器指定初始化参数 -->
+        <init-param>
+            <!-- 指定参数的名称 -->
+            <param-name>Site</param-name>
+            <!-- 指定参数的值 -->
+            <param-value>www.baidu.com</param-value>
+        </init-param>
+    </filter>
+
+    <!-- 拦截顺序: -->
+    <!-- web.xml文件中<filter-mapping>标签的配置顺序 -->
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <!-- <servlet-name>displayHeader</servlet-name> 设置过滤器所拦截的Servlet名称 -->
+        <servlet-name>HttpHeaderServlet</servlet-name>
+    </filter-mapping>
+
+    <!-- 用于设置一个Filter所负责拦截的资源（两种方式指定拦截资源:Servlet名称或资源访问的请求路径）-->
+    <filter-mapping>
+        <!-- 用于设置filter的注册名称 -->
+        <filter-name>GlobalFilter</filter-name>
+        <!-- 设置filter所拦截的Servlet名称(过滤器关联的URL样式) -->
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+    <servlet>
+        <servlet-name>HttpHeaderServlet</servlet-name>
+        <servlet-class>HttpHeaderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HttpStatusServlet</servlet-name>
+        <servlet-class>HttpStatusServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RefreshServlet</servlet-name>
+        <servlet-class>RefreshServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HttpHeaderServlet</servlet-name>
+        <url-pattern>/http_header</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HttpStatusServlet</servlet-name>
+        <url-pattern>/http_status</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RefreshServlet</servlet-name>
+        <url-pattern>/refresh</url-pattern>
+    </servlet-mapping>
+
+</web-app>

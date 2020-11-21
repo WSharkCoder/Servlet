@@ -1,0 +1,48 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+<servlet>
+  <servlet-name>helloForm</servlet-name>
+  <servlet-class>HelloFormServlet</servlet-class>
+</servlet>
+
+  <servlet>
+  <servlet-name>readCookie</servlet-name>
+  <servlet-class>ReadCookieServlet</servlet-class>
+</servlet>
+  <servlet>
+    <servlet-name>deleteCookie</servlet-name>
+    <servlet-class>DeleteCookieServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sessionTrack</servlet-name>
+    <servlet-class>SessionTrackServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>helloForm</servlet-name>
+    <url-pattern>/hellofrom</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>readCookie</servlet-name>
+    <url-pattern>/readCookie</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>deleteCookie</servlet-name>
+    <url-pattern>/deleteCookie</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sessionTrack</servlet-name>
+    <url-pattern>/sessionTrack</url-pattern>
+  </servlet-mapping>
+<!--  设置session会话超时时间时间-->
+  <session-config>
+<!--    下面设置会话超时时间，单位为分钟-->
+    <session-timeout>1</session-timeout>
+  </session-config>
+</web-app>
